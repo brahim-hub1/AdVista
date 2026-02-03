@@ -1,21 +1,21 @@
 # AdVista
 
-AdVista is a SwiftUI iOS MVP built to explore and analyze ad creatives.
-The goal of this project is to demonstrate fast execution, clean architecture,
-and realistic data handling using Firebase and CSV seed data.
+AdVista est un MVP iOS développé en SwiftUI pour explorer et analyser des creatives publicitaires.
+L’objectif de ce projet est de démontrer une exécution rapide, une architecture propre
+et une gestion réaliste des données à l’aide de Firebase et de données CSV servant de seed data.
 
 ---
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-- Browse ad creatives with key KPIs
-- Dashboard / overview screen
-- Creatives list and detail views
-- Dynamic data loading
-- Firebase (Firestore) integration
-- CSV seed data import
-- Switch between **CSV data source** and **Firebase data source**
-- Clean SwiftUI interface (Apple-style)
+- Parcours des creatives publicitaires avec KPIs clés
+- Écran dashboard / vue d’ensemble
+- Liste des creatives et vue de détail
+- Chargement dynamique des données
+- Intégration de Firebase (Firestore)
+- Import de données CSV (seed data)
+- Possibilité de basculer entre la **source CSV** et la **source Firebase**
+- Interface SwiftUI propre et conforme aux guidelines Apple
 
 ---
 
@@ -23,8 +23,8 @@ and realistic data handling using Firebase and CSV seed data.
 
 - **SwiftUI**
 - **MVVM**
-- Modular feature-based structure
-- Clear separation of concerns:
+- Structure modulaire par features
+- Séparation claire des responsabilités :
   - Views
   - ViewModels
   - Services
@@ -32,40 +32,40 @@ and realistic data handling using Firebase and CSV seed data.
 
 ---
 
-## 📦 Data Sources
+## 📦 Sources de données
 
-The application supports **two data sources**:
+L’application prend en charge **deux sources de données** :
 
-1. **CSV (local)**
-   - Uses the CSV file provided in the assignment
-   - Parsed and mapped into domain models
-   - Useful for local testing and MVP setup
+### 1. **CSV (local)**
+- Utilise le fichier CSV fourni dans l’assignement
+- Les données sont parsées et mappées vers les modèles métier
+- Utile pour les tests locaux et la mise en place rapide du MVP
 
-2. **Firebase (Firestore)**
-   - The CSV data is treated as *seed / fake data*
-   - Imported into Firestore as structured documents (JSON)
-   - The app can fetch creatives directly from Firestore
-   - A **switch** allows changing the active data source at runtime
+### 2. **Firebase (Firestore)**
+- Les données CSV sont considérées comme des *seed / fake data*
+- Importées dans Firestore sous forme de documents structurés (JSON)
+- L’application récupère les creatives directement depuis Firestore
+- Un **switch** permet de changer la source de données à l’exécution
 
-> Firestore is used only as a data source for this MVP  
-> (no authentication or advanced backend logic).
-
----
-
-## 🔥 Firebase Setup
-
-- Firebase is initialized using the standard iOS SDK
-- Configuration is done via `GoogleService-Info.plist`
-- No admin credentials are used or exposed
-- Firestore is used in read mode for this test
+> Firestore est utilisé uniquement comme source de données pour ce MVP  
+> (sans authentification ni logique backend avancée).
 
 ---
 
-## 📁 Project Structure
+## 🔥 Configuration Firebase :
+
+- Firebase est initialisé via le SDK iOS standard
+- La configuration est effectuée à l’aide du fichier `GoogleService-Info.plist`
+- Aucun credential admin n’est utilisé ou exposé
+- Firestore est utilisé en mode lecture pour ce test
+
+---
+
+## 📁 Structure du projet :
 
 ```
-AdVista/                ← repo root
-├── AdVista/            ← app source root
+AdVista/                ← racine du dépôt
+├── AdVista/            ← code source de l’application
 │   ├── App/
 │   ├── Core/
 │   ├── DesignSystem/
@@ -78,45 +78,42 @@ AdVista/                ← repo root
 ├── AdVista.xcodeproj/
 ├── AdVistaTests/
 └── AdVistaUITests/
-
 ```
 
----
+▶️ Build & Run :
 
-## ▶️ Build & Run
+Ouvrir AdVista.xcodeproj dans Xcode
 
-1. Open `AdVista.xcodeproj` in Xcode
-2. Select the **AdVista** scheme
-3. Choose an **iOS simulator (iOS 18.2+)**
-4. Run the app (`Cmd + R`)
+Sélectionner le scheme AdVista
 
----
+Choisir un simulateur iOS (iOS 18.2+)
 
-## 🧪 MVP Scope & Trade-offs
+Lancer l’application (Cmd + R)
 
-- Focused on **core functionality and execution**
-- UI kept simple and clean (no heavy animations)
-- Firebase usage kept minimal and pragmatic
-- CSV import logic adapted to Firestore constraints (JSON documents)
+🧪 Périmètre MVP & compromis :
 
-This approach reflects a **realistic MVP mindset**:  
-shipping something functional, extensible, and easy to iterate on.
+Focus sur la fonctionnalité cœur et l’exécution
 
----
+UI volontairement simple et lisible (pas d’animations complexes)
 
-## 🛠 Tools
+Utilisation minimale et pragmatique de Firebase
 
-- SwiftUI
-- Firebase (Firestore)
-- Xcode
-- Codex CLI (used to accelerate development)
+Logique d’import CSV adaptée aux contraintes de Firestore (documents JSON)
 
----
+Cette approche reflète une vision réaliste du MVP :
+livrer rapidement une application fonctionnelle, extensible et facile à faire évoluer.
 
-## 📌 Notes
+🛠 Outils utilisés :
 
-This project was built as a **1-day MVP test**.
-Improvements such as authentication, advanced filtering,
-offline caching, or pagination can easily be added if needed.
+-SwiftUI
 
----
+-Firebase (Firestore)
+
+-Xcode
+
+-Codex CLI (utilisé pour accélérer le développement)
+
+📌 Remarques:
+Ce projet a été réalisé dans le cadre d’un test MVP sur une journée.
+Des améliorations telles que l’authentification, des filtres avancés,
+le cache offline ou la pagination peuvent être ajoutées facilement si nécessaire.

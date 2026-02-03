@@ -64,20 +64,21 @@ The application supports **two data sources**:
 ## 📁 Project Structure
 
 ```
-AdVista/
-├── App/                    # App entry point & environment
-├── Core/                   # Models, services, utilities
-├── DesignSystem/           # Shared UI styles & components
-├── Features/               # Feature modules
-│   ├── Overview/
-│   ├── CreativesList/
-│   └── CreativeDetail/
-├── Navigation/              # Navigation flows
-├── Resources/               # Assets & Firebase config
-├── Preview/                 # SwiftUI previews & mock data
-├── AdVista.xcodeproj/       # Xcode project
-├── AdVistaTests/            # Unit tests
-└── AdVistaUITests/          # UI tests
+AdVista/                ← repo root
+├── AdVista/            ← app source root
+│   ├── App/
+│   ├── Core/
+│   ├── DesignSystem/
+│   ├── Features/
+│   ├── Navigation/
+│   ├── Resources/
+│   ├── Preview/
+│   ├── Assets.xcassets/
+│   └── Preview Content/
+├── AdVista.xcodeproj/
+├── AdVistaTests/
+└── AdVistaUITests/
+
 ```
 
 ---
